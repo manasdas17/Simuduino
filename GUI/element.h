@@ -1,8 +1,7 @@
 #ifndef ELEMENT_H
 #define ELEMENT_H
 
-#include "svgview.h"
-#include "elementmanager.h" // pb d'inclusion croisée
+#include "elementmanager.h"
 
 // Pour utiliser le polymorphisme :
 // template <typename T>
@@ -11,12 +10,9 @@ class Element : public ElementManager
 {
 public:
     Element();
-    Element(SvgView* view);
     // Element(Element* father);
-    ~Element();
 
     // general :
-    void setPicture(const QString fileName);
 
     // visual modifiers :
     void rotate(qreal direction);
@@ -25,8 +21,9 @@ public:
     void brighten(qreal alpha);
 
     // getters and setters :
-    SvgView* getView() { return m_view; }
-    void setView(SvgView* view) { m_view = view; }
+
+    void setPictureName(const QString fileName) { m_picture_name = fileName; }
+    QString getPictureName() { return m_picture_name; }
 
     qreal getDirection() { return m_direction; }
     void setDirection(qreal direction) { rotate(direction - m_direction); }
@@ -43,6 +40,7 @@ public:
 private:
     SvgView* m_view;
     QString m_name;
+    QString m_picture_name;
 
     // visual attributes :
     qreal m_xPosition;

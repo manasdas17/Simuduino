@@ -1,14 +1,17 @@
 #ifndef ELEMENTMANAGER_H
 #define ELEMENTMANAGER_H
 
-#include <QString>
-#include "element.h"
+#include <QMap>
+#include "svgview.h"
+
+class Element;
 
 class ElementManager
 {
 public:
+    ElementManager();
     ElementManager(SvgView* view);
-    ~ElementManager();
+
     void addElement(QString name);
     void addElement(QString name, Element* elmt);
 

@@ -1,5 +1,8 @@
 #include "svgview.h"
 
+#include <QDebug>
+#include <qmath.h>
+
 SvgView::SvgView(QWidget *parent) : QGraphicsView(parent), m_zoom(1)
 {
     this->scene = new QGraphicsScene(this);

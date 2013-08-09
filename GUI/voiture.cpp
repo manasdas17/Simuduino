@@ -1,9 +1,8 @@
 #include "voiture.h"
-#include "element.h"
 
 Voiture::Voiture()
 {
-    addElement("roueAv");
+    // addElement("roueAv");
     // m_roueAv->setPicture("../images/roue.svg");
 
     //m_roueAr = new Element(this);

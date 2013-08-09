@@ -1,23 +1,10 @@
 #include "element.h"
 
-Element::Element()
+#include "svgview.h"
+
+Element::Element() : m_picture_name("")
 {
 
-}
-
-Element::Element(SvgView* view) : m_view(view)
-{
-
-}
-
-Element::~Element()
-{
-
-}
-
-void Element::setPicture(const QString fileName)
-{
-    m_view->openFile(fileName);
 }
 
 void Element::rotate(qreal direction)

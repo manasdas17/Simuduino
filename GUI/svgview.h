@@ -8,8 +8,6 @@
 #include <QGraphicsRectItem>
 #include <QGraphicsSvgItem>
 #include <QPaintEvent>
-#include <qmath.h>
-#include <QDebug>
 #include <QVector>
 
 QT_BEGIN_NAMESPACE

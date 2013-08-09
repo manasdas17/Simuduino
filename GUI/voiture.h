@@ -7,7 +7,8 @@
 
 // On ajoutera une classe Element (vide) pour avr-gcc.
 // et l'utilisateur devra impérativement inclure element.h dans ses classes et les faire hériter de Element.
-// Ou : l'includion et l'héritage est rajouté par le simulateur.
+// Ou : l'inclusion et l'héritage est rajouté par le simulateur.
+// Ou : polymorphisme ?
 
 class Voiture : public Element
 {

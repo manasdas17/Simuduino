@@ -11,19 +11,18 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 TARGET = Simuduino
 TEMPLATE = app
 
-
-SOURCES +=  element.cpp \
-            main.cpp \
+SOURCES +=  main.cpp \
             mainwindow.cpp \
-            svgview.cpp \
+            element.cpp \
+            elementmanager.cpp \
             voiture.cpp \
-    elementmanager.cpp
+            svgview.cpp
 
-HEADERS  += element.h \
-            mainwindow.h \
-            svgview.h \
+HEADERS  += mainwindow.h \
+            element.h \
+            elementmanager.h \
             voiture.h \
-    elementmanager.h
+            svgview.h
 
 FORMS    += mainwindow.ui
 

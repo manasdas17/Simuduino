@@ -2,10 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
-#include <QString>
-#include <QtWidgets>
 #include "svgview.h"
-#include "element.h"
 
 class SvgView;
 

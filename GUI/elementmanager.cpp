@@ -1,26 +1,35 @@
+#define IMG_PATH "../images/"
 #include "elementmanager.h"
+
+#include <QString>
+#include <QDebug>
+
+#include "element.h"
+
+ElementManager::ElementManager()
+{
+
+}
 
 ElementManager::ElementManager(SvgView* view) : m_view(view)
 {
 
 }
 
-Element::~Element()
+void ElementManager::addElement(QString name)
 {
-    m_elmts.clear();
+    Element* elmt = new Element();
+    addElement(name, elmt);
 }
 
-void Element::addElement(QString name)
-{
-    qDebug() << m_view;
+// Nom de l'image = nom de l'elmt :
 
-    Element* elmt = new Element(m_view);
-    elmt->setPicture("../images/" + name + ".svg");
-    m_elmts.insert(name, elmt);
-}
-
-void Element::addElement(QString name, Element* elmt)
+void ElementManager::addElement(QString name, Element* elmt)
 {
+    if (elmt->getPictureName().isEmpty()) {
+        elmt->setPictureName(IMG_PATH + name + ".svg");
+    }
+    m_view->openFile(elmt->getPictureName());
     m_elmts.insert(name, elmt);
 }
 

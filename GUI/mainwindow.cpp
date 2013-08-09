@@ -1,5 +1,10 @@
 #include "mainwindow.h"
 
+#include <QString>
+#include <QtWidgets>
+
+#include "element.h"
+
 MainWindow::MainWindow()
 {
     m_view = new SvgView();
